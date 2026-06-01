@@ -1,0 +1,13 @@
+```markdown
+# 📝 To-Do List API & Frontend Application
+
+Une application web complète de gestion de tâches (To-Do List) utilisant une architecture moderne découplée (**Backend API / Frontend Client**). Ce projet démontre la communication synchrone entre un serveur FastAPI en Python et une interface utilisateur dynamique en HTML/CSS/JavaScript.
+
+## 🚀 Fonctionnalités
+- **CRUD Complet** : Ajouter, lister, basculer le statut (terminé/en cours) et supprimer des tâches.
+- **Backend Performant** : API REST rapide et légère propulsée par FastAPI.
+- **Validation automatique** : Utilisation de modèles Pydantic pour garantir la conformité des données.
+- **Documentation interactive** : Interface Swagger UI accessible directement pour tester l'API.
+- **Frontend Découplé** : Interface moderne, responsive et légère en HTML5/CSS3 pur, connectée à l'API via des requêtes asynchrones (`fetch`).
+
+```
