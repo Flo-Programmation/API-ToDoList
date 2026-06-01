@@ -1,0 +1,130 @@
+/* Styles Généraux */
+body {
+    background-color: #f1f5f9; /* bg-slate-100 */
+    min-height: 100vh;         /* min-h-screen */
+    display: flex;             /* flex */
+    align-items: center;       /* items-center */
+    justify-content: center;   /* justify-content */
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Le conteneur principal (la carte) */
+.todo-container {
+    background-color: #ffffff; /* bg-white */
+    padding: 2rem;             /* p-8 */
+    border-radius: 1rem;       /* rounded-2xl */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl */
+    width: 100%;               /* w-full */
+    max-width: 28rem;          /* max-w-md */
+    margin: 1rem;              /* m-4 */
+}
+
+/* Titre */
+.todo-title {
+    font-size: 1.875rem;       /* text-3xl */
+    font-weight: 800;          /* font-extrabold */
+    color: #1e293b;            /* text-slate-800 */
+    margin-bottom: 1.5rem;     /* mb-6 */
+    text-align: center;        /* text-center */
+}
+
+/* Zone de saisie (Formulaire / Flex) */
+.input-group {
+    display: flex;             /* flex */
+    gap: 0.5rem;               /* gap-2 */
+    margin-bottom: 1.5rem;     /* mb-6 */
+}
+
+/* Champ de texte */
+.todo-input {
+    flex: 1 1 0%;              /* flex-1 */
+    font-size: 16px;
+    padding: 1rem;      /* px-4 py-2 */
+    border: 1px solid #e2e8f0; /* border border-slate-200 */
+    border-radius: 0.75rem;    /* rounded-xl */
+    background-color: #f8fafc; /* bg-slate-50 */
+    color: #334155;            /* text-slate-700 */
+    outline: none;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.todo-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2); /* focus:ring-2 focus:ring-blue-500 */
+}
+
+/* Bouton Ajouter */
+.btn-add {
+    background-color: #2563eb; /* bg-blue-600 */
+    color: #ffffff;            /* text-white */
+    font-weight: 600;          /* font-semibold */
+    padding: 0.5rem 1.25rem;   /* px-5 py-2 */
+    border-radius: 0.75rem;    /* rounded-xl */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s; /* transition-colors */
+}
+
+.btn-add:hover {
+    background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+
+/* Liste des tâches */
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;              /* space-y-3 */
+}
+
+/* Ligne d'une tâche (Li) */
+.todo-item {
+    display: flex;             /* flex */
+    align-items: center;       /* items-center */
+    justify-content: space-between; /* justify-between */
+    padding: 0.875rem;         /* p-3.5 */
+    background-color: #f8fafc; /* bg-slate-50 */
+    border-radius: 0.75rem;    /* rounded-xl */
+    border: 1px solid #f1f5f9; /* border border-slate-100 */
+}
+
+/* Groupe Texte + Case à cocher */
+.todo-content {
+    display: flex;             /* flex */
+    align-items: center;       /* items-center */
+    gap: 0.75rem;              /* gap-3 */
+    cursor: pointer;
+}
+
+/* Icône check (Émoticône) */
+.todo-icon {
+    font-size: 1.25rem;        /* text-xl */
+}
+
+/* Texte du ToDo */
+.todo-text {
+    color: #334155;            /* text-slate-700 */
+}
+
+/* Style si la tâche est complétée */
+.todo-text.completed {
+    text-decoration: line-through; /* line-through */
+    color: #94a3b8;                /* text-slate-400 */
+}
+
+/* Bouton Supprimer */
+.btn-delete {
+    background: none;
+    border: none;
+    color: #f87171;            /* text-red-400 */
+    font-weight: 600;          /* font-semibold */
+    font-size: 0.875rem;       /* text-sm */
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-delete:hover {
+    color: #dc2626;            /* hover:text-red-600 */
+}

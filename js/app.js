@@ -5,17 +5,18 @@ async function fetchTodos() {
     const response = await fetch(API_URL);
     const todos = await response.json();
     const listElement = document.getElementById("todoList");
-    listElement.innerHTML = ""; // On vide la liste
+    listElement.innerHTML = ""; 
 
     todos.forEach(todo => {
         const li = document.createElement("li");
-        li.className = "flex items-center justify-between p-3.5 bg-slate-50 rounded-xl border border-slate-100 shadow-xs";
+        // ON AJOUTE LA CLASSE SUR LE LI
+        li.className = "todo-item"; 
         li.innerHTML = `
-            <div class="flex items-center gap-3 cursor-pointer" onclick="toggleTodo(${todo.id})">
-                <span class="text-xl">${todo.completed ? '✅' : '⚪'}</span>
-                <span class="text-slate-700 ${todo.completed ? 'line-through text-slate-400' : ''}">${todo.title}</span>
+            <div class="todo-content" onclick="toggleTodo(${todo.id})">
+                <span class="todo-icon">${todo.completed ? '✅' : '⏹️'}</span>
+                <span class="todo-text ${todo.completed ? 'completed' : ''}">${todo.title}</span>
             </div>
-            <button onclick="deleteTodo(${todo.id})" class="text-red-400 hover:text-red-600 transition-colors text-sm font-semibold">
+            <button onclick="deleteTodo(${todo.id})" class="btn-delete">
                 Supprimer
             </button>
         `;
